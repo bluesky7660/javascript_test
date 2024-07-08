@@ -1,1 +1,1 @@
-alert("common.js");
+// alert("common.js");
