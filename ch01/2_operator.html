@@ -42,15 +42,72 @@
         var num2 = 20;
         var result;
 
-        result = num1++;
-        console.log(result + " : " + num1);
-        var result2 = ++num2;
-        console.log(result2 + " : " + num2);
-        var result3 = num2--;
-        console.log(result3 + " : " + num2);
-        var result4 = --num2;
-        console.log(result4 + " : " + num2);
-        alert(result + " : " + num1);
+        // result = num1++;
+        // console.log(result + " : " + num1);
+        // var result2 = ++num2;
+        // console.log(result2 + " : " + num2);
+        // var result3 = num2--;
+        // console.log(result3 + " : " + num2);
+        // var result4 = --num2;
+        // console.log(result4 + " : " + num2);
+        // alert(result + " : " + num1);
+
+
+        //# 비교연산자
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+
+        var result;
+
+        result = a>b;
+        console.log(result);
+        result = a >= b;
+        console.log(result);
+        result = a < b;
+        console.log(result);
+        result = a <= b;
+        console.log(result);
+        result = a == b;
+        console.log(result);
+        result = a != b;
+        console.log(result);
+        // alert(result);
+
+        var result2;
+        // result2 = b == f;    //==는 데이터만 비교한다. 예로 number 20과 string 20은 true
+        result2 = b === f;  //===는 데이터 타입까지 비교를 한다. number 20과 string 20은 false
+        // alert(result2);
+
+        //논리 연산자
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+
+        result = n<b && a>=m;   //and   모두가 참일 참
+        // result = a<n || a>=m;   //or 한개 이상이 참일때 참
+        result = !(a>n);    //!는 반대 !(a>b)는 ()안의 값은 false 이므로 반대인 true;
+        // alert(result);
+
+        // 삼함조건 연산자
+        var a = 10;
+        var b = 20;
+
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+        var result = a > b ? "javascript" : "hello";
+
+        alert(result);
+
     </script>
 </body>
 </html>
