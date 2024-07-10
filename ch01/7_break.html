@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //break
+        for(let i  = 1; i <= 10; i++){
+            if(i==5){
+                console.log("탈출~!");
+                break;
+            }
+            console.log(i);
+        }
+
+        //continue
+        for(let i  = 1; i <= 10; i++){
+            if((i % 2) ==0){
+                console.log("회귀~!");
+                continue;
+            }
+            console.log(i);
+        }
+
+        //
+        var i = 0;
+        var n = 0;
+        while (i<5) {
+            console.log(i + " : " + n);
+            i++;
+            
+            if(i===3){
+                continue;
+            }
+            n += 1;
+            // console.log(i + " : " + n);
+        }
+
+    </script>
+</body>
+</html>
