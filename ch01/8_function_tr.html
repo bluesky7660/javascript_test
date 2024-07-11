@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abc(){
+
+        }
+        
+        var a = 10;
+        var b = 6;
+        function add(num1,num2) {
+            var result = num1 + num2;
+            console.log("------------------------------------");
+            console.log(result);
+        }
+
+        function add1(num1,num2) {
+            var result = num1 + num2;
+            console.log("------------------------------------");
+            return result;
+        }
+        function sub1(num1,num2) {
+            var result = num1 - num2;
+            console.log("------------------------------------");
+            return result;
+        }
+        function mul1(num1,num2) {
+            var result = num1 * num2;
+            console.log("------------------------------------");
+            return result;
+        }
+        function divide1(num1,num2) {
+            num1 = change(num1);
+            var result = num1 / num2;
+            console.log("------------------------------------");
+            return result;
+        }
+        
+        function change(num) {
+            return num + 10;
+        }
+
+        var realresult = add1(a,b);
+        // var realresult = sub1(a,b);
+        // var realresult = mul1(a,b);
+        // var realresult = divide1(a,b);
+        
+        alert(realresult);
+    </script>
+</body>
+</html>
