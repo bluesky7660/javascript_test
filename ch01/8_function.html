@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  a;
+        // 함수 사용
+        // abc();
+
+        //함수 정의
+        // function abc() {
+        //     alert("function");
+        // }
+        // function abc(num1 ,num2) {
+            
+        // }
+
+        var a = 8;
+        var b = 5;
+        // function add(num1, num2){
+        //     var resoult = num1 + num2;
+        //     alert(resoult);
+        // }
+        // function sub(num1, num2){
+        //     var resoult = num1 - num2;
+        //     alert(resoult);
+        // }
+        // function mul(num1, num2){
+        //     var resoult = num1 * num2;
+        //     alert(resoult);
+        // }
+        // function divide(num1, num2){
+        //     var resoult = num1 / num2;
+        //     alert(resoult);
+        // }
+
+        // add(a,b);
+
+        
+        // function add2(num1, num2){
+        //     var resoult = num1 + num2;
+        //     return resoult; //예약어
+        // }
+
+        // function add1(num1, num2){
+        //     var result = num1 + num2;
+        //     return result;
+        // }
+        function sub1(num1, num2){
+            num1 = change(num1);
+            var result = num1 - num2;
+            return result;
+        }
+        // function mul1(num1, num2){
+        //     var result = num1 * num2;
+        //     return result;
+        // }
+        // function divide1(num1, num2){
+        //     var result = num1 / num2;
+        //     return result;
+        // }
+
+        function change (num) {
+            return num + 15;
+        }
+        // var realResoult = add1(a,b);
+        var realResoult = sub1(a,b);
+        // var realResoult = mul1(a,b);
+        // var realResoult = divide1(a,b);
+        alert(realResoult);
+        
+    </script>
+</body>
+</html>
