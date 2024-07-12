@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var a = 10;
+        var b = 6;
+
+        function compare(num1, num2) {
+            var bignum = 0;
+            if(num1 > num2){
+                bignum = num1;
+            } else{
+                bignum = num2;
+            }   
+            return bignum;
+        }
+        
+
+        function output(big) {
+            console.log("변수1과 변수2 중 큰 수는 " + big + " 입니다.");
+            // alert("변수1과 변수2 중 큰 수는 " + big + " 입니다.");
+        }
+        var result = compare(a,b);
+        output(result);
+
+        // var result = num4(10,15);
+
+        // num5(result);
+
+        // // num4(-,15);
+
+        // function num4(num1, num2) {
+        //     let result;
+        //     if(num1 < num2) {
+        //         result = num2;
+        //     } else {
+        //         result = num1;
+        //     }
+        //     return result;
+        // }
+        // function num4(result1) {
+        //     console.log("변수1과 변수2 중 큰 수는 " + result1 + " 입니다.");
+        // }
+
+        var num = 31;
+        function compare2(num) {
+            var a="";
+            if ((num % 2) == 0) {
+                a = "짝수"          
+            } else{
+                a = "홀수"
+            }
+            return a;
+        }
+
+        function output2(n) {
+            console.log(num + "는 "+ n +" 입니다.");
+        }
+        var result2 = compare2(num);
+        output2(result2);
+        
+    </script>
+</body>
+</html>
