@@ -7,15 +7,41 @@
 </head>
 <body>
     <script>
-        var num = 0;
-        var randomNum = Math.floor(((Math.random())*45)+1);
-        var totoNum = [];
-
-        for(let i = 1; i <= 5; i++) {
-            totoNum[i-1] = Math.floor(((Math.random())*45)+1);
+        lottoNum();
+        function lottoNum() {
             
+            var randomNum = Math.floor(((Math.random())*45)+1);
+            var totoNum = [];
+
+            function sameNum(a) {
+                console.log("a : " + a);
+                return totoNum.includes(a);
+                
+            }
+            // function oreder(b) {
+            //     console.log("b : " + a);
+            //     return totoNum.find((e) => (e === b));
+            // }
+            for(let i = 1; i <= 6; i++) {
+                let Num = Math.floor(((Math.random())*45)+1);
+                    // if(i != 5){
+                    //     totoNum[i-1] = totoNum[i-1] 
+                    // }
+                console.log(sameNum(Num));
+                if (! sameNum(Num)) {      
+                    totoNum.push(Num); 
+                    console.log(totoNum);
+
+                } else{
+                    i--;    
+                }
+                // totoNum[i-1] += "번";
+                console.log(totoNum);
+            }
+            console.log("이번 복권번호는 " + totoNum + "입니다.");
+           
         }
-        console.log(totoNum);
+        
     </script>
 </body>
 </html>
