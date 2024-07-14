@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        li{
+            text-align: center;
+            /* flex-basis: 10%; */
+            width: calc(13% - 20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1; 
+            border-radius: 50%;
+            /* margin-right: 20px; */
+            font-size   : 20px;
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
         function lottoNum() {
             
             var randomNum = Math.floor(((Math.random())*45)+1);
@@ -34,17 +65,20 @@
             console.log("이번 복권번호는 " + totoNum.join(", ") + " 입니다.");
             const newElement = document.createElement("div");
             const ulElement = document.createElement("ul");
+            document.body.appendChild(ulElement);
             document.body.appendChild(newElement); 
             var numbersOnly = totoNum;
 
             // 숫자만큼 <li> 요소 생성 및 추가
             numbersOnly.forEach(function(num) {
                 const liElement = document.createElement("li");
-                liElement.textContent = num + "번";
+                liElement.textContent = num.replace('번', '');
+                liElement.style.backgroundColor = getRandomColor();
                 ulElement.appendChild(liElement);
             });
             
-            // newElement.innerHTML = "<div class='numArea'><p>" + totoNum.map( c => c.replace('번', '')) + "</p></div><div class='textbox'>이번 복권번호는 " + totoNum.join(", ") + " 입니다.</div>";
+            newElement.innerHTML = "<div class='textbox'>이번 복권번호는 " + totoNum.join(", ") + " 입니다.</div>";
+            newElement.style.paddingLeft = "mar";
             
         }
         lottoNum();
