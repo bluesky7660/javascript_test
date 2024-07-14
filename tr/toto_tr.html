@@ -7,7 +7,47 @@
 </head>
 <body>
     <script>
+        function lottoNum() {
+            
+            var randomNum = Math.floor(((Math.random())*45)+1);
+            var totoNum = [];
 
+            function sameNum(a) {
+                console.log("a : " + a);
+                return totoNum.includes(a);
+                
+            }
+            for(let i = 1; i <= 6; i++) {
+                let Num = Math.floor(((Math.random())*45)+1);
+                console.log(sameNum(Num));
+                if (!sameNum(Num) && (Math.abs(totoNum[totoNum.length-1] - Num) !== 1)) {      
+                    totoNum.push(Num); 
+
+                } else{
+                    i--;
+                }
+  
+                console.log(totoNum);
+            }
+            totoNum.sort(function(a, b) {return a - b;});
+            totoNum = totoNum.map( c => c + "번");
+            console.log("이번 복권번호는 " + totoNum.join(", ") + " 입니다.");
+            const newElement = document.createElement("div");
+            const ulElement = document.createElement("ul");
+            document.body.appendChild(newElement); 
+            var numbersOnly = totoNum;
+
+            // 숫자만큼 <li> 요소 생성 및 추가
+            numbersOnly.forEach(function(num) {
+                const liElement = document.createElement("li");
+                liElement.textContent = num + "번";
+                ulElement.appendChild(liElement);
+            });
+            
+            // newElement.innerHTML = "<div class='numArea'><p>" + totoNum.map( c => c.replace('번', '')) + "</p></div><div class='textbox'>이번 복권번호는 " + totoNum.join(", ") + " 입니다.</div>";
+            
+        }
+        lottoNum();
     </script>
 </body>
 </html>
